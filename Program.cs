@@ -82,10 +82,12 @@ namespace Game
             var rand2 = new Random();
             var randNumber = rand2.Next(10);
 
-            if (userNumber.Winner(randNumber))
-                Console.WriteLine("Yay! You won!!!!");
-            else
-                Console.WriteLine("Sorry, you lost :(");
+            userNumber.Winner(randNumber).Prize();
+
+            //if (userNumber.Winner(randNumber))
+            //    Console.WriteLine("Yay! You won!!!!");
+            //else
+            //    Console.WriteLine("Sorry, you lost :(");
 
             //Console.WriteLine(userNumber + " " + randNumber);
         }
@@ -98,6 +100,10 @@ namespace Game
             if (b == true)
             {
                 Console.WriteLine("Yay! ~~~ *** You won a million euros!!! *** ~~~~");
+            }
+            else
+            {
+                Console.WriteLine("Oh, I'm sorry :(");
             }
         }
 
